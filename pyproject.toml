@@ -13,7 +13,9 @@ Flask-SQLAlchemy = "^2.4"
 psycopg2 = "^2.8"
 InstagramApi = "^1.0"
 marshmallow-sqlalchemy = "^0.19.0"
-
+instagram-private-api = {git = "https://git@github.com/ping/instagram_private_api.git"}
+cachier = "^1.2"
+python-dotenv = "^0.10.3"
 [tool.poetry.dev-dependencies]
 
 [build-system]
