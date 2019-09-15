@@ -1,4 +1,5 @@
 examples
+stories
 vendor
 composer.json
 composer.lock
@@ -7,4 +8,7 @@ cache
 :stories
 
 .vscode
+.env
+.idea
 instadump.code-workspace
+instagramsettings

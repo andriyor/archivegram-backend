@@ -1,10 +1,11 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, send_from_directory
 from flask_cors import CORS
 
 from flask_sqlalchemy import SQLAlchemy
 from marshmallow_sqlalchemy import ModelSchema
 
 import instaloader
+from instagram_service import build_story
 import instagram_helper
 
 app = Flask(__name__)
@@ -76,6 +77,17 @@ def instagram_user():
     username = request.args.get('username')
     results = instagram_helper.search_instagram_users(username)
     return jsonify(results)
+
+
+@app.route('/stories/<path:path>')
+def send_js(path):
+    print(path)
+    return send_from_directory('stories', path)
+
+
+@app.route('/stories', methods=['GET'])
+def stories():
+    return jsonify(build_story('takubeats'))
 
 
 if __name__ == "__main__":
