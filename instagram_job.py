@@ -63,4 +63,5 @@ def download_user_story(username):
 
 
 if __name__ == '__main__':
-    download_user_story('shldk')
+    # download_user_story('shldk')
+    download_user_story('jc_ru')

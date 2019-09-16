@@ -85,9 +85,9 @@ def send_js(path):
     return send_from_directory('stories', path)
 
 
-@app.route('/stories', methods=['GET'])
-def stories():
-    return jsonify(build_stories('shldk'))
+@app.route('/stories/<username>', methods=['GET'])
+def stories(username):
+    return jsonify(build_stories(username))
 
 
 if __name__ == "__main__":
