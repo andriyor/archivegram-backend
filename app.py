@@ -5,7 +5,7 @@ from flask_sqlalchemy import SQLAlchemy
 from marshmallow_sqlalchemy import ModelSchema
 
 import instaloader
-from instagram_service import build_story
+from instagram_service import build_stories
 import instagram_helper
 
 app = Flask(__name__)
@@ -87,7 +87,7 @@ def send_js(path):
 
 @app.route('/stories', methods=['GET'])
 def stories():
-    return jsonify(build_story('takubeats'))
+    return jsonify(build_stories('shldk'))
 
 
 if __name__ == "__main__":
